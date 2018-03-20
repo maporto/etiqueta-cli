@@ -1,0 +1,28 @@
+<div id="telaEtiqueta" flex="90" flex-offset="5">
+    <form name="etiqueta.etiquetaForm" ng-submit="$ctrl.download($ctrl.etiquetaForm)">
+        <div layout="column">
+            <div layout="row" flex ng-repeat="(key, etiqueta) in $ctrl.etiquetas">
+                <md-input-container flex>
+                    <label>Quantidade</label>
+                    <input type="number" ng-model="etiqueta.quantidade" required>
+                </md-input-container flex>
+                <md-input-container flex>
+                    <label>CNPJ</label>
+                    <input ng-model="etiqueta.cnpj" ui-br-cnpj-mask required md-maxlength="18">
+                </md-input-container flex>
+                <md-input-container flex>
+                    <label>Codigo de Barras</label>
+                    <input ng-model="etiqueta.codigoBarras" md-maxlength="13" ng-pattern="/^[0-9]{13}$/" required>
+                </md-input-container>
+                <md-input-container>
+                    <label>Data Validade</label>
+                    <md-datepicker ng-model="etiqueta.dataValidade"></md-datepicker>
+                </md-input-container>
+            </div>
+            <div class="actions">
+                <md-button type="button" class="md-accent" ng-click="$ctrl.adicionarEtiqueta()">Adicionar Etiqueta</md-button>
+                <md-button type="submit" class="md-raised md-primary">Gerar Arquivo</md-button>
+            </div>
+        </div>
+    </form>
+</div>
