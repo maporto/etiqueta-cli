@@ -1,1 +1,1 @@
-web: node heroku-web.js
+web: vendor/bin/heroku-php-apache2 build/
