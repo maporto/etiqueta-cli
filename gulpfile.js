@@ -346,6 +346,10 @@ gulp.task('serve-build', ['build'], function() {
   serve(false /*isDev*/);
 });
 
+gulp.task('heroku:production', ['build'], function(){
+  console.log('herokuduction');
+});
+
 /**
  * Bump the version
  * --type=pre will bump the prerelease version *.*.*-x
