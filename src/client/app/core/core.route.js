@@ -7,7 +7,7 @@
 
   /* @ngInject */
   function appRun(routerHelper) {
-    var otherwise = '/etiqueta';
+    var otherwise = '/';
     routerHelper.configureStates(getStates(), otherwise);
   }
 

@@ -15,7 +15,7 @@
     return [{
       state: 'etiqueta',
       config: {
-        url: '/etiqueta',
+        url: '/',
         templateUrl: 'app/etiqueta/etiqueta.html',
         controller: 'EtiquetaController',
         controllerAs: '$ctrl',
