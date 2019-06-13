@@ -1,4 +1,4 @@
-# genos
+# Etiqueta
 
 **Generated from HotTowel Angular**
 
